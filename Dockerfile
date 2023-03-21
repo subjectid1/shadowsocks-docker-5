@@ -20,4 +20,5 @@ RUN apk update && apk add --no-cache ca-certificates tzdata
 COPY --from=builder /go/go-shadowsocks2/bin/go-shadowsocks2 /bin/
 ENV TZ=Asia/Shanghai
 RUN uname -a
+EXPSE 8488
 ENTRYPOINT ["/bin/go-shadowsocks2"]
